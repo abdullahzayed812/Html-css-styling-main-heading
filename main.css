@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.main-heading {
+    text-align: center;
+    padding: 20px;
+    background-color: #00bcd4;
+    color: #3f51b5;
+}
+.container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+section {
+    padding: 20px;
+    width: 250px;
+    margin-bottom: 50px;
+    border: 1px solid #ccc;
+}
+section h1 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+section h3 {
+    font-size: 19px;
+    width: 100%;
+    padding-bottom: 20px;
+    position: relative;
+    color: #2196f3;
+    margin-bottom: 30px;
+}
+section span {
+    position: absolute;
+    left: -2px;
+    bottom: -6px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #2196f3;
+}
+section h3::before {
+    position: absolute;
+    bottom: 0;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #ccc;
+}
+section h3::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    width: 50%;
+    height: 2px;
+    background-color: #2196f3;
+}
+section h3.red {
+    color: red
+}
+section h3.red::after {
+    background-color: red
+}
+section h3.red span {
+    background-color: red
+}
+section h3.green {
+    color: green
+}
+section h3.green::after {
+    background-color: green
+}
+section h3.green span {
+    background-color: green
+}
+section h3.orange {
+    color: #ff5722
+}
+section h3.orange::after {
+    background-color: #ff5722
+}
+section h3.orange span {
+    background-color: #ff5722
+}
+.box h3 span {
+    border-radius: 0;
+}
+.tirangle-up h3 span,
+.tirangle-down h3 span {
+    position: absolute;
+    bottom: 0;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #ccc;
+}
+.tirangle-up h3::before,
+.tirangle-down h3::before {
+    position: absolute;
+    left: -2px;
+    bottom: 1px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: white white black;
+    border-width: 12px;
+}
+.tirangle-up .blue::before {
+    border-color: white white #2196f3;
+}
+.tirangle-up .red::before {
+    border-color: white white red;
+}
+.tirangle-up .greed::before {
+    border-color: white white green;
+}
+.tirangle-up .orange::before {
+    border-color: white white #ff5722;
+}
+.tirangle-down h3::before {
+    left: -2px;
+    bottom: -22px;
+}
+.tirangle-down .blue::before {
+    border-color: #2196f3 white white;
+}
+.tirangle-down .red::before {
+    border-color: red white white;
+}
+.tirangle-down .green::before {
+    border-color: green white white;
+}
+.tirangle-down .orange::before {
+    border-color: #ff5722 white white;
+}
